@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html lang="mr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>बालाजी इन्फ्रा ग्रुप | Balaji Infra Group</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts - Hind / Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hind:wght@300;400;500;600;700&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        navy: {
+                            800: '#0F172A',
+                            900: '#0B1120',
+                            950: '#030712'
+                        },
+                        gold: {
+                            400: '#FACC15',
+                            500: '#EAB308',
+                            600: '#CA8A04'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Hind', 'Poppins', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        body {
+            font-family: 'Hind', 'Poppins', sans-serif;
+            background-color: #f8fafc;
+            color: #1e293b;
+        }
+        .hero-bg {
+            background: linear-gradient(rgba(15, 23, 42, 0.85), rgba(15, 23, 42, 0.9)), url('https://images.unsplash.com/photo-1541888946425-d0fbb186a5b3?auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(226, 232, 240, 0.8);
+        }
+    </style>
+</head>
+<body class="antialiased bg-slate-50 text-slate-800">
+
+    <!-- Navigation Bar -->
+    <header class="sticky top-0 z-50 bg-slate-900 text-white shadow-xl">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <!-- Logo -->
+                <a href="#" class="flex items-center space-x-3 group">
+                    <div class="w-12 h-12 bg-gradient-to-tr from-amber-500 to-yellow-300 rounded-xl flex items-center justify-center text-slate-900 font-extrabold text-2xl shadow-lg transform group-hover:scale-105 transition duration-300">
+                        बी
+                    </div>
+                    <div>
+                        <span class="text-xl sm:text-2xl font-bold tracking-tight text-white block">बालाजी इन्फ्रा <span class="text-amber-400">ग्रुप</span></span>
+                        <span class="text-xs text-slate-400 tracking-wider uppercase block">Balaji Infra Group</span>
+                    </div>
+                </a>
+
+                <!-- Desktop Menu -->
+                <nav class="hidden md:flex space-x-8 text-base font-medium">
+                    <a href="#home" class="hover:text-amber-400 transition duration-200">मुख्य पृष्ठ</a>
+                    <a href="#about" class="hover:text-amber-400 transition duration-200">आमच्याबद्दल</a>
+                    <a href="#services" class="hover:text-amber-400 transition duration-200">सेवा</a>
+                    <a href="#projects" class="hover:text-amber-400 transition duration-200">प्रकल्प</a>
+                    <a href="#contact" class="hover:text-amber-400 transition duration-200">संपर्क</a>
+                </nav>
+
+                <!-- CTA Button -->
+                <div class="hidden md:block">
+                    <a href="#contact" class="bg-gradient-to-r from-amber-500 to-yellow-500 text-slate-900 font-semibold px-5 py-2.5 rounded-lg shadow-md hover:from-amber-600 hover:to-yellow-600 transition duration-300 transform hover:-translate-y-0.5">
+                        <i class="fa-solid fa-paper-plane mr-2"></i> चौकशी करा
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden">
+                    <button id="mobile-menu-btn" class="text-slate-300 hover:text-white focus:outline-none p-2" aria-label="Toggle Menu">
+                        <i class="fa-solid fa-bars text-2xl" id="menu-icon"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-slate-900 border-t border-slate-800 px-4 pt-3 pb-6 space-y-3">
+            <a href="#home" class="mobile-nav-link block text-slate-200 hover:text-amber-400 font-medium py-2">मुख्य पृष्ठ</a>
+            <a href="#about" class="mobile-nav-link block text-slate-200 hover:text-amber-400 font-medium py-2">आमच्याबद्दल</a>
+            <a href="#services" class="mobile-nav-link block text-slate-200 hover:text-amber-400 font-medium py-2">सेवा</a>
+            <a href="#projects" class="mobile-nav-link block text-slate-200 hover:text-amber-400 font-medium py-2">प्रकल्प</a>
+            <a href="#contact" class="mobile-nav-link block text-slate-200 hover:text-amber-400 font-medium py-2">संपर्क</a>
+            <a href="#contact" class="mobile-nav-link block text-center bg-amber-500 text-slate-900 font-semibold py-2.5 rounded-lg shadow mt-2">
+                चौकशी करा
+            </a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-bg relative text-white py-24 lg:py-36 flex items-center">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full relative z-10">
+            <div class="max-w-3xl">
+                <span class="inline-block bg-amber-500/20 text-amber-400 border border-amber-500/30 px-4 py-1.5 rounded-full text-sm font-semibold mb-6">
+                    <i class="fa-solid fa-award mr-1.5"></i> ५००+ यशस्वी प्रोजेक्ट्स पूर्ण
+                </span>
+                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-tight mb-6">
+                    तुमच्या स्वप्नातील <br><span class="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 via-yellow-300 to-amber-500">वास्तूची उत्कृष्ट निर्मिती!</span>
+                </h1>
+                <p class="text-lg sm:text-xl text-slate-300 mb-8 leading-relaxed">
+                    बालाजी इन्फ्रा ग्रुपसोबत बनवा तुमचं हक्काचं घर आणि व्यावसायिक जागा. आधुनिक डिझाईन, उत्तम गुणवत्ता आणि वेळेत ताबा या आमच्या मुख्य वैशिष्ट्यांसह आम्ही देतो गुणवत्तेची खात्री.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <a href="#projects" class="bg-amber-500 text-slate-900 font-bold px-8 py-4 rounded-xl shadow-lg hover:bg-amber-400 transition duration-300 text-center text-lg flex items-center justify-center">
+                        <i class="fa-solid fa-building mr-2"></i> प्रकल्प पहा
+                    </a>
+                    <a href="#contact" class="bg-slate-800/80 hover:bg-slate-800 text-white border border-slate-600 font-semibold px-8 py-4 rounded-xl transition duration-300 text-center text-lg flex items-center justify-center backdrop-blur-sm">
+                        <i class="fa-solid fa-phone mr-2"></i> थेट संपर्क साधा
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Banner -->
+    <section class="bg-amber-500 py-8 text-slate-950 shadow-lg relative z-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+                <div class="p-2">
+                    <h2 class="text-3xl sm:text-4xl font-extrabold">१५+</h2>
+                    <p class="text-sm sm:text-base font-semibold text-slate-900">वर्षांचा अनुभव</p>
+                </div>
+                <div class="p-2">
+                    <h2 class="text-3xl sm:text-4xl font-extrabold">५००+</h2>
+                    <p class="text-sm sm:text-base font-semibold text-slate-900">आनंदी कुटुंबे</p>
+                </div>
+                <div class="p-2">
+                    <h2 class="text-3xl sm:text-4xl font-extrabold">२५+</h2>
+                    <p class="text-sm sm:text-base font-semibold text-slate-900">पूर्ण झालेले प्रकल्प</p>
+                </div>
+                <div class="p-2">
+                    <h2 class="text-3xl sm:text-4xl font-extrabold">१००%</h2>
+                    <p class="text-sm sm:text-base font-semibold text-slate-900">गुणवत्तेची हमी</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <!-- Image Grid -->
+                <div class="relative">
+                    <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80" alt="Modern Architecture" class="rounded-2xl shadow-2xl object-cover w-full h-[400px] sm:h-[480px]">
+                    <div class="absolute -bottom-6 -right-6 bg-slate-900 text-white p-6 rounded-2xl shadow-xl hidden sm:block max-w-xs border border-slate-700">
+                        <i class="fa-solid fa-shield-halved text-amber-400 text-3xl mb-2"></i>
+                        <h4 class="font-bold text-lg">विश्वासू नाव</h4>
+                        <p class="text-xs text-slate-300">बालाजी इन्फ्रा ग्रुप नेहमी वेळेत आणि दर्जेदार काम पूर्ण करण्यासाठी वचनबद्ध आहे.</p>
+                    </div>
+                </div>
+
+                <!-- Text Content -->
+                <div>
+                    <span class="text-amber-600 font-bold uppercase tracking-wider text-sm block mb-2">आमच्याबद्दल जाणून घ्या</span>
+                    <h2 class="text-3xl sm:text-4xl font-bold text-slate-900 mb-6 leading-tight">
+                        आम्ही फक्त इमारती बांधत नाही, <span class="text-amber-600">आम्ही तुमची स्वप्ने साकार करतो!</span>
+                    </h2>
+                    <p class="text-slate-600 mb-6 leading-relaxed">
+                        बालाजी इन्फ्रा ग्रुप हा महाराष्ट्रातील एक अग्रगण्य आणि विश्वासार्ह रिअल इस्टेट व बांधकाम समूह आहे. गेल्या १५ हून अधिक वर्षांपासून आम्ही निवासी (Residential) आणि व्यावसायिक (Commercial) क्षेत्रांत उत्कृष्ट दर्जाचे प्रकल्प यशस्वीरित्या पूर्ण केले आहेत.
+                    </p>
+                    <div class="space-y-4 mb-8">
+                        <div class="flex items-start space-x-3">
+                            <i class="fa-solid fa-circle-check text-amber-500 text-xl mt-1"></i>
+                            <div>
+                                <h4 class="font-bold text-slate-900">सर्वोत्तम बांधकाम साहित्य (Quality Construction)</h4>
+                                <p class="text-sm text-slate-600">आम्ही नेहमी सिमेंट, स्टील आणि इतर साहित्यासाठी उच्च दर्जाचे ब्रँड्स वापरतो.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-3">
+                            <i class="fa-solid fa-circle-check text-amber-500 text-xl mt-1"></i>
+                            <div>
+                                <h4 class="font-bold text-slate-900">वेळेवर ताबा (On-Time Delivery)</h4>
+                                <p class="text-sm text-slate-600">प्रकल्प ठरवलेल्या मुदतीत पूर्ण करून ग्राहकांना ताबा देणे ही आमची प्राथमिकता आहे.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-3">
+                            <i class="fa-solid fa-circle-check text-amber-500 text-xl mt-1"></i>
+                            <div>
+                                <h4 class="font-bold text-slate-900">पारदर्शक व्यवहार (100% Transparency)</h4>
+                                <p class="text-sm text-slate-600">RERA नोंदणीकृत प्रकल्प आणि कोणत्याही छुपा खर्च न ठेवता स्पष्ट व्यवहार.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 bg-slate-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-amber-600 font-bold uppercase tracking-wider text-sm block mb-2">आमच्या प्रमुख सेवा</span>
+                <h2 class="text-3xl sm:text-4xl font-bold text-slate-900">इन्फ्रास्ट्रक्चर आणि कन्स्ट्रक्शन सेवा</h2>
+                <div class="w-20 h-1 bg-amber-500 mx-auto mt-4 rounded-full"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div class="bg-white p-8 rounded-2xl shadow-md hover:shadow-xl transition duration-300 border border-slate-200">
+                    <div class="w-14 h-14 bg-amber-100 text-amber-600 rounded-xl flex items-center justify-center text-2xl font-bold mb-6">
+                        <i class="fa-solid fa-house-chimney"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3">रेसिडेन्शियल प्रोजेक्ट्स (Residential)</h3>
+                    <p class="text-slate-600 leading-relaxed text-sm">
+                        १ BHK, २ BHK आणि ३ BHK लक्झरियस अपार्टमेंट्स, रो-हाऊस आणि व्हिला चे आधुनिक बांधकाम.
+                    </p>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="bg-white p-8 rounded-2xl shadow-md hover:shadow-xl transition duration-300 border border-slate-200">
+                    <div class="w-14 h-14 bg-amber-100 text-amber-600 rounded-xl flex items-center justify-center text-2xl font-bold mb-6">
+                        <i class="fa-solid fa-building-user"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3">कमर्शियल कॉम्प्लेक्स (Commercial)</h3>
+                    <p class="text-slate-600 leading-relaxed text-sm">
+                        व्यवसायासाठी दुकाने, कॉर्पोरेट ऑफिस स्पेसेस आणि शॉपिंग कॉम्प्लेक्सची उत्तम ठिकाणी उभारणी.
+                    </p>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="bg-white p-8 rounded-2xl shadow-md hover:shadow-xl transition duration-300 border border-slate-200">
+                    <div class="w-14 h-14 bg-amber-100 text-amber-600 rounded-xl flex items-center justify-center text-2xl font-bold mb-6">
+                        <i class="fa-solid fa-compass-drafting"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3">प्लॉटींग आणि लेआऊट (Plotting)</h3>
+                    <p class="text-slate-600 leading-relaxed text-sm">
+                        Clear Title एन.ए. (N.A.) प्लॉट्स, विकसित लेआऊट, रस्ते, वीज आणि पाण्याच्या सुविधेसह प्लॉट विक्री.
+                    </p>
+                </div>
+
+                <!-- Service 4 -->
+                <div class="bg-white p-8 rounded-2xl shadow-md hover:shadow-xl transition duration-300 border border-slate-200">
+                    <div class="w-14 h-14 bg-amber-100 text-amber-600 rounded-xl flex items-center justify-center text-2xl font-bold mb-6">
+                        <i class="fa-solid fa-hammer"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3">सिव्हिल कॉन्ट्रॅक्ट्स (Civil Contracts)</h3>
+                    <p class="text-slate-600 leading-relaxed text-sm">
+                        इंडस्ट्रियल, गव्हर्नमेंट आणि खाजगी सिव्हिल इन्फ्रास्ट्रक्चर प्रोजेक्ट्सचे सर्वसमावेशक कॉन्ट्रॅक्ट.
+                    </p>
+                </div>
+
+                <!-- Service 5 -->
+                <div class="bg-white p-8 rounded-2xl shadow-md hover:shadow-xl transition duration-300 border border-slate-200">
+                    <div class="w-14 h-14 bg-amber-100 text-amber-600 rounded-xl flex items-center justify-center text-2xl font-bold mb-6">
+                        <i class="fa-solid fa-pen-ruler"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3">आर्किटेक्चर व डिझाईन (Architecture)</h3>
+                    <p class="text-slate-600 leading-relaxed text-sm">
+                        3D एलिव्हेशन, अंतर्गत सजावट (Interior Design) आणि वास्तूशास्त्रानुसार आधुनिक प्लॅनिंग.
+                    </p>
+                </div>
+
+                <!-- Service 6 -->
+                <div class="bg-white p-8 rounded-2xl shadow-md hover:shadow-xl transition duration-300 border border-slate-200">
+                    <div class="w-14 h-14 bg-amber-100 text-amber-600 rounded-xl flex items-center justify-center text-2xl font-bold mb-6">
+                        <i class="fa-solid fa-handshake"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3">पुनर्विकास (Redevelopment)</h3>
+                    <p class="text-slate-600 leading-relaxed text-sm">
+                        जुन्या इमारतींचा सुरक्षित, वेळेत आणि फायदेशीर पुनर्विकास (Redevelopment Projects).
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <span class="text-amber-600 font-bold uppercase tracking-wider text-sm block mb-2">आमचे प्रोजेक्ट्स</span>
+                <h2 class="text-3xl sm:text-4xl font-bold text-slate-900">आमचे प्रमुख प्रकल्प</h2>
+                <div class="w-20 h-1 bg-amber-500 mx-auto mt-4 rounded-full"></div>
+            </div>
+
+            <!-- Filter Buttons -->
+            <div class="flex flex-wrap justify-center gap-3 mb-12" id="project-filters">
+                <button class="filter-btn active bg-slate-900 text-white px-5 py-2 rounded-full font-medium text-sm transition" data-filter="all">सर्व</button>
+                <button class="filter-btn bg-slate-100 text-slate-700 hover:bg-amber-500 hover:text-slate-900 px-5 py-2 rounded-full font-medium text-sm transition" data-filter="residential">रेसिडेन्शियल</button>
+                <button class="filter-btn bg-slate-100 text-slate-700 hover:bg-amber-500 hover:text-slate-900 px-5 py-2 rounded-full font-medium text-sm transition" data-filter="commercial">कमर्शियल</button>
+                <button class="filter-btn bg-slate-100 text-slate-700 hover:bg-amber-500 hover:text-slate-900 px-5 py-2 rounded-full font-medium text-sm transition" data-filter="plots">प्लॉट्स</button>
+            </div>
+
+            <!-- Projects Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="projects-grid">
+                
+                <!-- Project 1 -->
+                <div class="project-card bg-slate-50 rounded-2xl overflow-hidden shadow-md border border-slate-200 hover:shadow-xl transition duration-300" data-category="residential">
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=800&q=80" alt="Balaji Heights" class="w-full h-full object-cover hover:scale-105 transition duration-500">
+                        <span class="absolute top-4 right-4 bg-emerald-500 text-white text-xs font-bold px-3 py-1 rounded-full uppercase shadow">चालू प्रकल्प</span>
+                    </div>
+                    <div class="p-6">
+                        <span class="text-amber-600 text-xs font-bold uppercase tracking-wider">२ & ३ BHK लक्झरी फ्लॅट्स</span>
+                        <h3 class="text-xl font-bold text-slate-900 mt-1 mb-2">बालाजी हाईट्स (Balaji Heights)</h3>
+                        <p class="text-slate-600 text-sm mb-4"><i class="fa-solid fa-location-dot text-amber-500 mr-1.5"></i> मुख्य रस्ता, शहर केंद्र</p>
+                        <div class="flex items-center justify-between border-t border-slate-200 pt-4">
+                            <span class="text-xs text-slate-500">अमेनिटीज: लिफ्ट, क्लबहाऊस, गार्डन</span>
+                            <a href="#contact" class="text-slate-900 hover:text-amber-600 font-bold text-sm flex items-center">
+                                माहिती मिळवा <i class="fa-solid fa-arrow-right ml-1"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="project-card bg-slate-50 rounded-2xl overflow-hidden shadow-md border border-slate-200 hover:shadow-xl transition duration-300" data-category="commercial">
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=800&q=80" alt="Balaji Business Hub" class="w-full h-full object-cover hover:scale-105 transition duration-500">
+                        <span class="absolute top-4 right-4 bg-blue-600 text-white text-xs font-bold px-3 py-1 rounded-full uppercase shadow">पूर्ण झालेला</span>
+                    </div>
+                    <div class="p-6">
+                        <span class="text-amber-600 text-xs font-bold uppercase tracking-wider">ऑफिस व दुकाने</span>
+                        <h3 class="text-xl font-bold text-slate-900 mt-1 mb-2">बालाजी बिझनेस हब (Balaji Business Hub)</h3>
+                        <p class="text-slate-600 text-sm mb-4"><i class="fa-solid fa-location-dot text-amber-500 mr-1.5"></i> स्टेशन रोड, MIDC जवळ</p>
+                        <div class="flex items-center justify-between border-t border-slate-200 pt-4">
+                            <span class="text-xs text-slate-500">अमेनिटीज: पार्किंग, २४x७ सुरक्षा</span>
+                            <a href="#contact" class="text-slate-900 hover:text-amber-600 font-bold text-sm flex items-center">
+                                माहिती मिळवा <i class="fa-solid fa-arrow-right ml-1"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="project-card bg-slate-50 rounded-2xl overflow-hidden shadow-md border border-slate-200 hover:shadow-xl transition duration-300" data-category="plots">
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=800&q=80" alt="Balaji Green City" class="w-full h-full object-cover hover:scale-105 transition duration-500">
+                        <span class="absolute top-4 right-4 bg-emerald-500 text-white text-xs font-bold px-3 py-1 rounded-full uppercase shadow">नवीन बुकिंग</span>
+                    </div>
+                    <div class="p-6">
+                        <span class="text-amber-600 text-xs font-bold uppercase tracking-wider">N.A. बंगलो प्लॉट्स</span>
+                        <h3 class="text-xl font-bold text-slate-900 mt-1 mb-2">बालाजी ग्रीन सिटी (Balaji Green City)</h3>
+                        <p class="text-slate-600 text-sm mb-4"><i class="fa-solid fa-location-dot text-amber-500 mr-1.5"></i> हायवे लगत, निसर्गरम्य परिसर</p>
+                        <div class="flex items-center justify-between border-t border-slate-200 pt-4">
+                            <span class="text-xs text-slate-500">सुविधा: कंपाऊंड, गेटेड कम्युनिटी</span>
+                            <a href="#contact" class="text-slate-900 hover:text-amber-600 font-bold text-sm flex items-center">
+                                माहिती मिळवा <i class="fa-solid fa-arrow-right ml-1"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action Banner -->
+    <section class="bg-slate-900 text-white py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl sm:text-4xl font-bold mb-4">तुमच्या स्वप्नातील घर बुक करण्यासाठी सज्ज आहात?</h2>
+            <p class="text-slate-300 max-w-2xl mx-auto mb-8 text-lg">
+                आजच आमच्या टीमशी संपर्क साधा आणि साइट व्हिजिट (Site Visit) साठी वेळ निश्चित करा.
+            </p>
+            <div class="flex flex-wrap justify-center gap-4">
+                <a href="#contact" class="bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold px-8 py-3.5 rounded-xl shadow-lg transition duration-300">
+                    <i class="fa-solid fa-calendar-check mr-2"></i> साइट व्हिजिट बुक करा
+                </a>
+                <a href="tel:+919876543210" class="bg-slate-800 hover:bg-slate-700 text-white font-semibold px-8 py-3.5 rounded-xl border border-slate-700 transition duration-300">
+                    <i class="fa-solid fa-phone-volume mr-2"></i> +91 98765 43210
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Us Section -->
+    <section id="contact" class="py-20 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-amber-600 font-bold uppercase tracking-wider text-sm block mb-2">संपर्क साधा</span>
+                <h2 class="text-3xl sm:text-4xl font-bold text-slate-900">आमच्याशी जोडले जा</h2>
+                <div class="w-20 h-1 bg-amber-500 mx-auto mt-4 rounded-full"></div>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+                <!-- Contact Information -->
+                <div class="lg:col-span-5 space-y-6">
+                    <div class="bg-white p-8 rounded-2xl shadow-md border border-slate-200">
+                        <h3 class="text-xl font-bold text-slate-900 mb-6 border-b border-slate-100 pb-4">
+                            कार्यालय संपर्क
+                        </h3>
+
+                        <div class="space-y-6">
+                            <div class="flex items-start space-x-4">
+                                <div class="w-12 h-12 bg-amber-100 text-amber-600 rounded-xl flex items-center justify-center text-xl shrink-0">
+                                    <i class="fa-solid fa-location-dot"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-slate-900 text-sm">मुख्य कार्यालय पत्ता</h4>
+                                    <p class="text-slate-600 text-sm mt-1 leading-relaxed">
+                                        बालाजी इन्फ्रा ग्रुप, ५ वा मजला, बालाजी टॉवर, मुख्य रस्ता, मुंबई - महाराष्ट्र.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start space-x-4">
+                                <div class="w-12 h-12 bg-amber-100 text-amber-600 rounded-xl flex items-center justify-center text-xl shrink-0">
+                                    <i class="fa-solid fa-phone"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-slate-900 text-sm">फोन नंबर</h4>
+                                    <p class="text-slate-600 text-sm mt-1">+91 98765 43210 / +91 91234 56789</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start space-x-4">
+                                <div class="w-12 h-12 bg-amber-100 text-amber-600 rounded-xl flex items-center justify-center text-xl shrink-0">
+                                    <i class="fa-solid fa-envelope"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-slate-900 text-sm">ईमेल</h4>
+                                    <p class="text-slate-600 text-sm mt-1">info@balajiinfragroup.com</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start space-x-4">
+                                <div class="w-12 h-12 bg-amber-100 text-amber-600 rounded-xl flex items-center justify-center text-xl shrink-0">
+                                    <i class="fa-solid fa-clock"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-slate-900 text-sm">कार्यालयीन वेळ</h4>
+                                    <p class="text-slate-600 text-sm mt-1">सोमवार ते शनिवार: सकाळी ९:३० ते संध्याकाळी ६:३०</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Inquiry Form -->
+                <div class="lg:col-span-7">
+                    <div class="bg-white p-8 rounded-2xl shadow-md border border-slate-200">
+                        <h3 class="text-xl font-bold text-slate-900 mb-2">चौकशी अर्ज (Inquiry Form)</h3>
+                        <p class="text-slate-500 text-sm mb-6">खालील फॉर्म भरा, आमचे प्रतिनिधी तुमच्याशी लवकरच संपर्क साधतील.</p>
+
+                        <!-- Notification Box -->
+                        <div id="form-alert" class="hidden p-4 mb-6 rounded-xl text-sm font-medium"></div>
+
+                        <form id="inquiry-form" class="space-y-5">
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                                <div>
+                                    <label class="block text-sm font-medium text-slate-700 mb-1">पूर्ण नाव *</label>
+                                    <input type="text" id="name" required class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-amber-500 focus:border-amber-500 outline-none transition" placeholder="तुमचे नाव प्रविष्ट करा">
+                                </div>
+                                <div>
+                                    <label class="block text-sm font-medium text-slate-700 mb-1">मोबाईल नंबर *</label>
+                                    <input type="tel" id="phone" required class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-amber-500 focus:border-amber-500 outline-none transition" placeholder="१० अंकी मोबाईल नंबर">
+                                </div>
+                            </div>
+
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                                <div>
+                                    <label class="block text-sm font-medium text-slate-700 mb-1">ईमेल पत्ता</label>
+                                    <input type="email" id="email" class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-amber-500 focus:border-amber-500 outline-none transition" placeholder="उदा. name@example.com">
+                                </div>
+                                <div>
+                                    <label class="block text-sm font-medium text-slate-700 mb-1">प्रकल्पाचा प्रकार</label>
+                                    <select id="project-type" class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-amber-500 focus:border-amber-500 outline-none transition bg-white">
+                                        <option value="residential">रेसिडेन्शियल फ्लॅट (Residential)</option>
+                                        <option value="commercial">कमर्शियल दुकान/ऑफिस (Commercial)</option>
+                                        <option value="plots">एन.ए. प्लॉट (N.A. Plots)</option>
+                                        <option value="other">इतर चौकशी</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div>
+                                <label class="block text-sm font-medium text-slate-700 mb-1">तुमचा संदेश / प्रश्न</label>
+                                <textarea id="message" rows="4" class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-amber-500 focus:border-amber-500 outline-none transition" placeholder="येथे तुमची आवश्यकता लिहा..."></textarea>
+                            </div>
+
+                            <button type="submit" class="w-full bg-slate-900 hover:bg-slate-800 text-white font-bold py-3.5 rounded-xl shadow-lg transition duration-300 flex items-center justify-center">
+                                <i class="fa-solid fa-paper-plane mr-2 text-amber-400"></i> माहिती पाठवा
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-950 text-slate-400 py-12 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
+                <!-- Column 1 -->
+                <div class="md:col-span-1">
+                    <div class="flex items-center space-x-2 mb-4">
+                        <div class="w-8 h-8 bg-amber-500 rounded-lg flex items-center justify-center text-slate-950 font-bold">बी</div>
+                        <span class="text-xl font-bold text-white tracking-tight">बालाजी इन्फ्रा</span>
+                    </div>
+                    <p class="text-sm text-slate-400 leading-relaxed mb-4">
+                        उच्च गुणवत्ता, पारदर्शकता आणि वेळेवर ताबा या तत्वांवर आधारित बांधकाम सेवा.
+                    </p>
+                    <div class="flex space-x-3 text-slate-400">
+                        <a href="#" class="w-9 h-9 bg-slate-800 rounded-lg flex items-center justify-center hover:bg-amber-500 hover:text-slate-950 transition"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" class="w-9 h-9 bg-slate-800 rounded-lg flex items-center justify-center hover:bg-amber-500 hover:text-slate-950 transition"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" class="w-9 h-9 bg-slate-800 rounded-lg flex items-center justify-center hover:bg-amber-500 hover:text-slate-950 transition"><i class="fa-brands fa-whatsapp"></i></a>
+                    </div>
+                </div>
+
+                <!-- Column 2 -->
+                <div>
+                    <h4 class="text-white font-semibold mb-4 text-base">त्वरित लिंक्स</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#home" class="hover:text-amber-400 transition">मुख्य पृष्ठ</a></li>
+                        <li><a href="#about" class="hover:text-amber-400 transition">आमच्याबद्दल</a></li>
+                        <li><a href="#services" class="hover:text-amber-400 transition">सेवा</a></li>
+                        <li><a href="#projects" class="hover:text-amber-400 transition">प्रकल्प</a></li>
+                        <li><a href="#contact" class="hover:text-amber-400 transition">संपर्क</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 3 -->
+                <div>
+                    <h4 class="text-white font-semibold mb-4 text-base">प्रकल्प प्रकार</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#projects" class="hover:text-amber-400 transition">१ & २ BHK अपार्टमेंट्स</a></li>
+                        <li><a href="#projects" class="hover:text-amber-400 transition">लक्झरी व्हिला</a></li>
+                        <li><a href="#projects" class="hover:text-amber-400 transition">कमर्शियल शॉप्स</a></li>
+                        <li><a href="#projects" class="hover:text-amber-400 transition">N.A. लेआऊट प्लॉट्स</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 4 -->
+                <div>
+                    <h4 class="text-white font-semibold mb-4 text-base">कायदेशीर माहिती</h4>
+                    <p class="text-xs text-slate-400 leading-relaxed mb-3">
+                        आमचे सर्व प्रकल्प RERA मान्यताप्राप्त आहेत. अधिक माहितीसाठी कार्यालयीन वेळेत भेट द्या.
+                    </p>
+                    <span class="inline-block bg-slate-800 text-amber-400 text-xs px-3 py-1.5 rounded border border-slate-700">
+                        <i class="fa-solid fa-shield-check mr-1"></i> RERA Approved Group
+                    </span>
+                </div>
+            </div>
+
+            <div class="border-t border-slate-800 pt-6 flex flex-col sm:flex-row justify-between items-center text-xs text-slate-500">
+                <p>&copy; 2026 बालाजी इन्फ्रा ग्रुप. सर्व हक्क सुरक्षित (All Rights Reserved).</p>
+                <p class="mt-2 sm:mt-0">Designed for Balaji Infra Group</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript Logic -->
+    <script>
+        // Mobile Navigation Toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const menuIcon = document.getElementById('menu-icon');
+        const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            if (mobileMenu.classList.contains('hidden')) {
+                menuIcon.classList.remove('fa-xmark');
+                menuIcon.classList.add('fa-bars');
+            } else {
+                menuIcon.classList.remove('fa-bars');
+                menuIcon.classList.add('fa-xmark');
+            }
+        });
+
+        // Close Mobile Menu on link click
+        mobileNavLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                menuIcon.classList.remove('fa-xmark');
+                menuIcon.classList.add('fa-bars');
+            });
+        });
+
+        // Project Interactive Filter
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const projectCards = document.querySelectorAll('.project-card');
+
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                // Remove active styling from all buttons
+                filterBtns.forEach(b => {
+                    b.classList.remove('bg-slate-900', 'text-white');
+                    b.classList.add('bg-slate-100', 'text-slate-700');
+                });
+
+                // Add active styling to clicked button
+                btn.classList.remove('bg-slate-100', 'text-slate-700');
+                btn.classList.add('bg-slate-900', 'text-white');
+
+                const filterValue = btn.getAttribute('data-filter');
+
+                projectCards.forEach(card => {
+                    if (filterValue === 'all' || card.getAttribute('data-category') === filterValue) {
+                        card.style.display = 'block';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
+        });
+
+        // Contact Form Submission Handling
+        const inquiryForm = document.getElementById('inquiry-form');
+        const formAlert = document.getElementById('form-alert');
+
+        inquiryForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+
+            const name = document.getElementById('name').value.trim();
+            const phone = document.getElementById('phone').value.trim();
+
+            if (!name || !phone) {
+                showAlert('कृपया तुमचे नाव आणि संपर्क क्रमांक प्रविष्ट करा.', 'error');
+                return;
+            }
+
+            // Display Success Alert
+            showAlert(`धन्यवाद ${name}! तुमची चौकशी प्राप्त झाली आहे. आमची टीम लवकरच तुमच्याशी संपर्क साधेल.`, 'success');
+            
+            // Reset form
+            inquiryForm.reset();
+        });
+
+        function showAlert(message, type) {
+            formAlert.textContent = message;
+            formAlert.classList.remove('hidden', 'bg-red-100', 'text-red-700', 'bg-emerald-100', 'text-emerald-800');
+
+            if (type === 'error') {
+                formAlert.classList.add('bg-red-100', 'text-red-700');
+            } else {
+                formAlert.classList.add('bg-emerald-100', 'text-emerald-800');
+            }
+
+            // Scroll to alert
+            formAlert.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+    </script>
+</body>
+</html>
